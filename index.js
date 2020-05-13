@@ -69,46 +69,15 @@ function isString(value) {
     return typeof value === 'string' || value instanceof String;
 }
 
-function ObjectOf(targetObject) {
-    function shapeOf(referenceObject) {
-        if (!isObject(targetObject) || !isObject(referenceObject)) {
-            throw new Error("shape must be an object.");
-        } else return checkObjectKeys(targetObject, referenceObject)
-    }
-
-    function checkObjectKeys(target, reference) {
-        if (!Object.is(Object.keys(target).length, Object.keys(reference).length)) {
-            throw new Error("Target should be the same lenght as the reference.")
-        } else {
-            return Object.keys(target).reduce((accumulator, currentKey) => {
-                const invoke = reference[currentKey](target[currentKey]);
-                if (invoke) {
-                    return {
-                        ...accumulator,
-                        ...{
-                            [currentKey]: target[currentKey]
-                        }
-                    }
-                } else return accumulator;
-            }, {});
-        };
-    }
-
-    return {
-        shapeOf,
-    }
-}
-
 module.exports = {
-    TString: isString,
-    TArray: isArray,
-    TObject: ObjectOf,
-    TNumber: isNumber,
-    TFunction: isFunction,
-    TUndefined: isUndefined,
-    TNull: isNull,
-    TError: isError,
-    TRegExp: isRegExp,
-    TSymbol: isSymbol,
-    TDate: isDate,
+    isString,
+    isArray,
+    isNumber,
+    isFunction,
+    isUndefined,
+    isNull,
+    isError,
+    isRegExp,
+    isSymbol,
+    isDate,
 }
