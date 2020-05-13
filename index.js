@@ -69,6 +69,41 @@ function isString(value) {
     return typeof value === 'string' || value instanceof String;
 }
 
+/**
+ * example: const firstName = "Jeff"
+ * typeOf(firstName).is("string")
+ * */
+function typeOf(value) {
+    function patternMatch(primitiveValue) {
+        if (!primitiveValue)
+            throw new Error("Value must not be undefined");
+        else
+            switch(primitiveValue.toLowerCase()) {
+                case "string":
+                    return isString(value);
+                case "number":
+                    return isNumber(value);
+                case "array":
+                    return isArray(value);
+                case "function":
+                    return isFunction(value);
+                case "undefined":
+                    return isUndefined(value);
+                case "null":
+                    return isNull(value);
+                case "error":
+                    return isError(value);
+                case "regexp":
+                    return isRegExp(value);
+                case "symbol":
+                    return isSymbol(value);
+                case "date":
+                    return isDate(value);
+            }
+    }
+    return patternMatch;
+}
+
 module.exports = {
     isString,
     isArray,
@@ -80,4 +115,5 @@ module.exports = {
     isRegExp,
     isSymbol,
     isDate,
+    typeOf,
 }
