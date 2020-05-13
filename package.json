@@ -1,8 +1,32 @@
 {
-  "name": "JavaScript Type Checker",
-  "version": "1.0.0",
-  "description": "Type checking javascrijpt values"
-  "dependencies": {
-    
+  "name": "js-typings-validator",
+  "version": "0.0.2",
+  "description": "Type checking javascript values",
+  "dist-tags": {
+    "latest": "0.0.1"
+  },
+  "versions": [
+    "0.0.1"
+  ],
+  "maintainers": [
+    "Jeffrey Marvin Forones <aiscenblue@gmail.com>"
+  ],
+  "homepage": "https://github.com/aiscenblue/js-type-validator",
+  "keywords": [
+    "JS Type validator"
+  ],
+  "repository": {
+    "url": "git+https://github.com/aiscenblue/js-type-validator.git",
+    "type": "git"
+  },
+  "contributors": [],
+  "author": "Jeffrey Marvin Forones <aiscenblue@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/aiscenblue/js-type-validator/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
