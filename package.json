@@ -1,7 +1,8 @@
 {
-  "name": "NODEJE TEST",
+  "name": "JavaScript Type Checker",
   "version": "1.0.0",
+  "description": "Type checking javascrijpt values"
   "dependencies": {
-
+    
   }
 }
