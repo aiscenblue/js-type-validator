@@ -1,12 +1,12 @@
 {
   "name": "js-typings-validator",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Type checking javascript values",
   "dist-tags": {
-    "latest": "0.0.1"
+    "latest": "0.0.4"
   },
   "versions": [
-    "0.0.1"
+    "0.0.4"
   ],
   "maintainers": [
     "Jeffrey Marvin Forones <aiscenblue@gmail.com>"
